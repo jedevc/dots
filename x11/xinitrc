@@ -4,5 +4,7 @@ xss-lock i3lock &
 
 eval $(ssh-agent)
 
+~/.fehbg &
+
 compton -b
 exec i3
