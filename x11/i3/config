@@ -16,7 +16,7 @@ font pango:hack 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Shift+Return exec i3-sensible-terminal
+bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -24,7 +24,7 @@ bindsym $mod+Shift+q kill
 # start program launcher
 # bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+Return exec rofi -show drun
+bindsym $mod+Shift+Return exec rofi -show drun
 
 # change focus
 bindsym $mod+j focus left
