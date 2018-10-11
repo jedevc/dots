@@ -1,0 +1,5 @@
+rofi.modi: drun
+rofi.theme: android_notification
+rofi.font: hack 13
+rofi.show-icons: true
+rofi.drun-icon-theme: Papirus

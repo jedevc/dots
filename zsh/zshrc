@@ -1,0 +1,27 @@
+# history
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=100000
+
+# history search
+autoload -U history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey '^[[A' history-beginning-search-backward-end
+bindkey '^[[B' history-beginning-search-forward-end
+
+# pushd
+setopt AUTO_PUSHD PUSHD_IGNORE_DUPS PUSHD_MINUS PUSHD_TO_HOME
+
+# autocompletion
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select
+setopt COMPLETE_ALIASES
+
+# colors
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+# prompt
+PROMPT='%F{red}%n%f@%F{blue}%m%f %F{yellow}%1~%f %# '

@@ -1,0 +1,6 @@
+setxkbmap gb
+
+xss-lock i3lock &
+
+compton -b
+exec i3
