@@ -9,6 +9,9 @@ fi
 
 echo "Installing to $DESTINATION."
 
+echo "Installing scripts..."
+cp -r bin/ $DESTINATION
+
 echo "Installing zsh..."
 ./zsh/install.sh $DESTINATION
 
