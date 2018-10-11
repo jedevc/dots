@@ -1,10 +1,18 @@
+# set keymap for X
 setxkbmap gb
 
+# autolock
 xss-lock i3lock &
 
+# disk mounting
+udiskie &
+
+# run ssh-agent
 eval $(ssh-agent)
 
+# wallpaper
 ~/.fehbg &
 
+# launch desktop
 compton -b
 exec i3
