@@ -2,10 +2,13 @@
 setxkbmap gb
 
 # autolock
-xss-lock i3lock &
+xss-lock i3lock -i ~/.wallpaper.png
 
 # disk mounting
 udiskie &
+
+# GTK/QT theming
+export QT_QPA_PLATFORMTHEME="qt5ct"
 
 # run ssh-agent
 eval $(ssh-agent)
