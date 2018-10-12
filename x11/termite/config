@@ -53,16 +53,16 @@ scrollback_lines = 10000
 #background = rgba(63, 63, 63, 0.8)
 
 # If unset, will reverse foreground and background
-highlight = #2f2f2f
+#highlight = #2f2f2f
 
 # special
 foreground      = #d0d0d0
 foreground_bold = #d0d0d0
 cursor          = #d0d0d0
-background      = #151515
+background      = #101010
 
 # black
-color0  = #151515
+color0  = #101010
 color8  = #505050
 
 # red
