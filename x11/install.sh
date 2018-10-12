@@ -10,3 +10,5 @@ cp -r $SOURCE/i3 $DESTINATION/.config
 cp -r $SOURCE/rofi $DESTINATION/.config
 cp -r $SOURCE/termite $DESTINATION/.config
 cp -r $SOURCE/polybar $DESTINATION/.config
+
+$SOURCE/themes/install.sh $DESTINATION
