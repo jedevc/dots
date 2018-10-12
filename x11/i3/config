@@ -179,3 +179,13 @@ gaps inner 10
 #     status_command i3status
 # }
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# window colors
+# class                 border  backgr. text    indicator child_border
+client.focused          #bababa #666666 #ffffff #bababa   #bababa
+client.focused_inactive #585858 #444444 #ffffff #444444   #585858
+client.unfocused        #353535 #222222 #888888 #353535   #353535
+client.urgent           #ac0000 #900000 #000000 #ac0000   #ac0000
+client.placeholder      #000000 #000000 #ffffff #000000   #000000
+
+client.background       #ffffff
