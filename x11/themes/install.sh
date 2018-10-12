@@ -12,4 +12,4 @@ cp $SOURCE/gtk-3.0.css $DESTINATION/.config/gtk-3.0/gtk.css
 mkdir -p $DESTINATION/.config/qt5ct
 cp $SOURCE/qt5ct.conf $DESTINATION/.config/qt5ct/qt5ct.conf
 
-cp $SOURCE/Trolltech.conf $DESTINATION/Trolltech.conf
+cp $SOURCE/Trolltech.conf $DESTINATION/.config/Trolltech.conf
