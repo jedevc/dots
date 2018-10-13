@@ -33,5 +33,11 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 # prompt
-PROMPT='%F{red}%n%f@%F{blue}%m%f %F{yellow}%1~%f %# '
+POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv vcs)
+POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
+source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
