@@ -89,6 +89,7 @@ enable-click = true
 
 label-mode = %mode%
 label-mode-padding = 2
+label-mode-foreground = ${colors.foreground-alt}
 label-mode-background = ${colors.background-alt}
 
 ; focused = Active workspace on focused monitor
