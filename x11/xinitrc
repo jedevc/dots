@@ -14,6 +14,9 @@ xss-lock -- i3lock -i ~/.wallpaper.png &
 # disk mounting
 udiskie &
 
+# NetworkManager
+nm-applet &
+
 # GTK/QT theming
 export QT_QPA_PLATFORMTHEME='qt5ct'
 export QT_AUTO_SCREEN_SCALE_FACTOR=0

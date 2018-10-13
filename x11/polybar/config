@@ -54,7 +54,8 @@ font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 
 modules-left = i3 xwindow
 modules-center = date
-modules-right = pulseaudio xbacklight cpu memory wlan eth battery
+;modules-right = pulseaudio xbacklight cpu memory wlan eth battery
+modules-right = pulseaudio xbacklight cpu memory battery
 
 tray-position = right
 tray-padding = 2
