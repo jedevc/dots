@@ -6,6 +6,9 @@ SAVEHIST=1000000000
 
 # keybindings
 set -o vi
+bindkey -v '^?' backward-delete-char
+bindkey -v '^H' backward-delete-char
+bindkey -v '^[[3~' delete-char
 
 # history search
 autoload -U history-search-end
