@@ -3,7 +3,7 @@
 #audible_bell = false
 #clickable_url = true
 #dynamic_title = true
-font = Font Awesome 5 Free
+#font = Font Awesome 5 Free
 font = hack
 #fullscreen = true
 #geometry = 640x480
