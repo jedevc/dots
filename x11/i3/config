@@ -178,6 +178,19 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease
 for_window [class="^.*"] border pixel 1
 gaps inner 10
 
+set $mode_gaps Gaps + - 0
+mode "$mode_gaps" {
+    bindsym plus gaps inner current plus 5
+    bindsym minus gaps inner current minus 5
+    bindsym 0 gaps inner current set 10, mode "default"
+
+    # back to normal
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+g mode "default"
+}
+bindsym $mod+g mode "$mode_gaps"
+
 # workspace bar
 # bar {
 #     status_command i3status
