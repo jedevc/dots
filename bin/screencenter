@@ -7,6 +7,10 @@ def main():
     # parse command line arguments
     parser = argparse.ArgumentParser('screencenter',
             description='center text in the terminal')
+    parser.add_argument('-nh', '--no-horizontal', action='store_true',
+            help='disable horizontal centering')
+    parser.add_argument('-nv', '--no-vertical', action='store_true',
+            help='disable vertical centering')
     parser.add_argument('-t', '--tab', type=int, default=4,
             help='number of spaces a tab should be converted to')
     args = parser.parse_args()
@@ -27,8 +31,8 @@ def main():
 
     # calculate offsets
     size = shutil.get_terminal_size()
-    xoff = (size.columns - max_length) // 2
-    yoff = (size.lines - len(lines)) // 2
+    xoff = 0 if args.no_horizontal else (size.columns - max_length) // 2
+    yoff = 0 if args.no_vertical else (size.lines - len(lines)) // 2
 
     # print centered text
     for i in range(yoff): print()
