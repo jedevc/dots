@@ -1,7 +1,8 @@
 # history
+setopt INC_APPEND_HISTORY HIST_IGNORE_DUPS
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=100000
+HISTSIZE=2000
+SAVEHIST=1000000000
 
 # keybindings
 set -o vi
@@ -30,3 +31,4 @@ alias grep='grep --color=auto'
 
 # prompt
 PROMPT='%F{red}%n%f@%F{blue}%m%f %F{yellow}%1~%f %# '
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
