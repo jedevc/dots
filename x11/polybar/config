@@ -17,30 +17,26 @@
 ;==========================================================
 
 [colors]
-background = #222
-background-alt = #444
-foreground = #ddd
-foreground-alt = #777
+background = #c4101010
+background-alt = #c4404040
 
-red = #f90000
-yellow = #ffb52a
-blue = #0a6cf5
-green = #55aa55
+foreground = #999
+foreground-alt = #ddd
 
 [bar/main]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 27
+height = 30
 radius = 0
 fixed-center = true
 
-;background = ${colors.background}
-background-0 = ${colors.background}
-background-1 = #00000000
+bottom = true
+
+background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 2
-line-color = #f00
+line-size = 0
+line-color = #ddd
 
 border-size = 0
 border-color = #00000000
@@ -79,40 +75,43 @@ cursor-scroll = default
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:100:...%
+format-foreground = ${colors.foreground-alt}
 
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
+enable-click = true
 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
+label-mode = %mode%
 label-mode-padding = 2
-label-mode-foreground = #000
-label-mode-background = ${colors.yellow}
+label-mode-background = ${colors.background-alt}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
+label-focused-foreground = ${colors.foreground-alt}
 label-focused-background = ${colors.background-alt}
-label-focused-underline = ${colors.yellow}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
-label-unfocused-padding = 2
+label-unfocused-padding = ${self.label-focused-padding}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
+label-visible-foreground = ${self.label-focused-foreground}
 label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
-label-urgent-background = ${colors.red}
-label-urgent-padding = 2
+label-urgent-foreground = ${self.label-focused-foreground}
+label-urgent-background = ${self.label-focused-background}
+label-urgent-padding = ${self.label-focused-padding}
 
 ; Separator in between workspaces
 ; label-separator = |
@@ -123,7 +122,6 @@ type = internal/xbacklight
 format = <label>
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.red}
 
 label = %percentage%%
 
@@ -132,7 +130,6 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.yellow}
 label = %percentage:2%%
 
 [module/memory]
@@ -140,7 +137,6 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.yellow}
 label = %percentage_used%%
 
 [module/wlan]
@@ -151,12 +147,10 @@ interval = 3.0
 format-connected = <label-connected>
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
-format-connected-underline = ${colors.blue}
 label-connected = %essid%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
@@ -165,7 +159,6 @@ type = internal/network
 interface = enp0s31f6
 interval = 3.0
 
-format-connected-underline = ${colors.blue}
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
@@ -184,7 +177,6 @@ time-alt = %H:%M
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-;format-underline = ${colors.red}
 
 label = %date% %time%
 
@@ -193,7 +185,6 @@ type = internal/pulseaudio
 
 format-volume = <ramp-volume> <label-volume>
 label-volume = %percentage%%
-format-volume-underline = ${colors.red}
 
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -209,16 +200,13 @@ adapter = AC
 full-at = 97
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = ${colors.green}
 label-charging = %percentage%% (%time%)
 
 format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
 label-discharging = %percentage%% (%time%)
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
