@@ -35,6 +35,7 @@ alias grep='grep --color=auto'
 
 # prompt
 if [[ $DISPLAY ]]; then
+	POWERLEVEL9K_MODE='awesome-fontconfig'
 	POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir)
 	POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv vcs)
 	POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
