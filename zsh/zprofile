@@ -1,2 +1,7 @@
 # set PATH
 export PATH=$PATH:~/bin:~/.local/bin
+
+# startx
+if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+	exec startx
+fi
