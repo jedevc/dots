@@ -26,6 +26,7 @@ setopt AUTO_PUSHD PUSHD_IGNORE_DUPS PUSHD_MINUS PUSHD_TO_HOME
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
+zstyle ':completion:*' rehash true
 setopt COMPLETE_ALIASES
 
 # colors
