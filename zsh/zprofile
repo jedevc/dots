@@ -1,5 +1,8 @@
 # set PATH
 export PATH=$PATH:~/bin:~/.local/bin
+for f in ~/.gem/ruby/*; do
+	PATH=$PATH:$f/bin
+done
 
 # startx
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
