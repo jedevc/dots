@@ -11,9 +11,6 @@ xset dpms 0 0 180
 # autolock
 xss-lock -- i3lock -i ~/.wallpaper.png &
 
-# disk mounting
-udiskie &
-
 # NetworkManager
 nm-applet &
 
