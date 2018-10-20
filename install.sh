@@ -15,6 +15,9 @@ cp -r bin/ $DESTINATION
 echo "Installing zsh..."
 ./zsh/install.sh $DESTINATION
 
+echo "Installing vim..."
+./vim/install.sh $DESTINATION
+
 echo "Installing x11..."
 ./x11/install.sh $DESTINATION
 

@@ -1,0 +1,59 @@
+" evim will already have done these settings
+if v:progname =~? "evim"
+  finish
+endif
+
+" get defaults
+source $VIMRUNTIME/defaults.vim
+
+" backups
+if has("vms")
+  set nobackup
+else
+  set nobackup
+  set writebackup
+  if has('persistent_undo')
+    set undofile
+    set undodir=$HOME/.vim/undo//
+  endif
+endif
+
+" swap
+set directory=$HOME/.vim/swap//
+
+if &t_Co > 2 || has("gui_running")
+  " switch on highlighting the last used search pattern.
+  set hlsearch
+endif
+
+if has("autocmd")
+  augroup vimrcEx
+  au!
+
+  autocmd FileType text setlocal textwidth=78
+
+  augroup END
+else
+  set autoindent
+endif
+
+" matchit
+if has('syntax') && has('eval')
+  packadd! matchit
+endif
+
+" gutter
+set number
+highlight LineNr ctermfg=darkgrey
+
+map <C-n> :NERDTreeToggle<CR>
+
+" theming
+let g:airline_theme='term'
+let g:airline_powerline_fonts = 1
+
+" autocompletion
+set completeopt=menu,longest,preview
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-p>"
+let g:SuperTabClosePreviewOnPopupClose = 1
