@@ -20,6 +20,7 @@ endif
 
 " swap
 set directory=$HOME/.vim/swap//
+set updatetime=500
 
 if &t_Co > 2 || has("gui_running")
   " switch on highlighting the last used search pattern.
