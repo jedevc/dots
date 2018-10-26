@@ -30,6 +30,7 @@ zstyle ':completion:*' rehash true
 setopt COMPLETE_ALIASES
 
 # colors
+autoload -U colors && colors
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
@@ -41,7 +42,7 @@ if [[ $DISPLAY ]]; then
 	POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
 	source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 else
-	PROMPT="%F{blue}%1~%f "
+	PROMPT="%F{blue}%1~%f %% "
 fi
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
