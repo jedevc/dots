@@ -174,28 +174,14 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease screen brightness
 
-# gaps
-for_window [class="^.*"] border pixel 1
-gaps inner 10
-
-set $mode_gaps Gaps + - 0
-mode "$mode_gaps" {
-    bindsym plus gaps inner current plus 5
-    bindsym minus gaps inner current minus 5
-    bindsym 0 gaps inner current set 10, mode "default"
-
-    # back to normal
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-    bindsym $mod+g mode "default"
-}
-bindsym $mod+g mode "$mode_gaps"
-
 # workspace bar
 # bar {
 #     status_command i3status
 # }
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# fancy things
+smart_borders on
 
 # window colors
 # class                 border  backgr. text    indicator child_border
