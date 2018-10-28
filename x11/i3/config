@@ -180,7 +180,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease
 # }
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# fancy things
+# borders
 smart_borders on
 
 # window colors
