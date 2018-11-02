@@ -54,8 +54,8 @@ font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 
 modules-left = i3 xwindow
 modules-center = date
-;modules-right = pulseaudio xbacklight cpu memory wlan eth battery
-modules-right = pulseaudio xbacklight cpu memory battery
+;modules-right = pulseaudio xbacklight cpu memory wlan eth battery0 battery1
+modules-right = pulseaudio xbacklight cpu memory battery0 battery1
 
 tray-position = right
 tray-padding = 2
@@ -197,7 +197,6 @@ label-muted = 
 
 [module/battery]
 type = internal/battery
-battery = BAT1
 adapter = AC
 full-at = 97
 
@@ -229,6 +228,14 @@ animation-discharging-2 = 
 animation-discharging-3 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 500
+
+[module/battery0]
+inherit = module/battery
+battery = BAT0
+
+[module/battery1]
+inherit = module/battery
+battery = BAT1
 
 [settings]
 screenchange-reload = true
