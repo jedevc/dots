@@ -14,6 +14,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'airblade/vim-gitgutter'
 
+  Plug 'SirVer/ultisnips'
+  Plug 'honza/vim-snippets'
+
   Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
@@ -70,3 +73,5 @@ endif
 
 " autocompletion
 set completeopt=menu,longest,preview
+let g:UltiSnipsExpandTrigger='<c-j>'
+let g:ycm_filetype_blacklist={}
