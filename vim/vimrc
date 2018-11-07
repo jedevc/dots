@@ -6,6 +6,15 @@ endif
 " get defaults
 source $VIMRUNTIME/defaults.vim
 
+" plugins
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
+Plug 'ervandew/supertab'
+call plug#end()
+
 " backups
 if has("vms")
   set nobackup
@@ -48,6 +57,7 @@ set number
 highlight LineNr ctermfg=darkgrey
 
 map <C-n> :NERDTreeToggle<CR>
+
 
 " theming
 let g:airline_theme='term'
