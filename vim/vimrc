@@ -8,11 +8,14 @@ source $VIMRUNTIME/defaults.vim
 
 " plugins
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'airblade/vim-gitgutter'
-Plug 'ervandew/supertab'
+
+  Plug 'scrooloose/nerdtree'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'airblade/vim-gitgutter'
+
+  Plug 'Valloric/YouCompleteMe'
+
 call plug#end()
 
 " backups
@@ -58,7 +61,6 @@ highlight LineNr ctermfg=darkgrey
 
 map <C-n> :NERDTreeToggle<CR>
 
-
 " theming
 let g:airline_theme='term'
 
@@ -68,6 +70,3 @@ endif
 
 " autocompletion
 set completeopt=menu,longest,preview
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-p>"
-let g:SuperTabClosePreviewOnPopupClose = 1
