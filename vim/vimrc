@@ -75,3 +75,4 @@ endif
 set completeopt=menu,longest,preview
 let g:UltiSnipsExpandTrigger='<c-j>'
 let g:ycm_filetype_blacklist={}
+let g:ycm_autoclose_preview_window_after_insertion=1
