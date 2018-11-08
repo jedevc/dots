@@ -1,5 +1,5 @@
 " evim will already have done these settings
-if v:progname =~? "evim"
+if v:progname =~? 'evim'
   finish
 endif
 
@@ -23,7 +23,7 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " backups
-if has("vms")
+if has('vms')
   set nobackup
 else
   set nobackup
@@ -38,12 +38,12 @@ endif
 set directory=$HOME/.vim/swap//
 set updatetime=100
 
-if &t_Co > 2 || has("gui_running")
+if &t_Co > 2 || has('gui_running')
   " switch on highlighting the last used search pattern.
   set hlsearch
 endif
 
-if has("autocmd")
+if has('autocmd')
   augroup vimrcEx
   au!
 
@@ -67,8 +67,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 " theming
 let g:airline_theme='term'
-
-if !has("gui_running")
+if !has('gui_running')
   let g:airline_powerline_fonts = 1
 endif
 
@@ -79,5 +78,5 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 
 " snippets
 " expand ultisnips on enter when the menu is open
-let g:UltiSnipsExpandTrigger = "<nop>"
-inoremap <expr> <CR> pumvisible() ? "<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>" : "\<CR>"
+let g:UltiSnipsExpandTrigger = '<nop>'
+inoremap <expr> <CR> pumvisible() ? '<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>' : "\<CR>"
