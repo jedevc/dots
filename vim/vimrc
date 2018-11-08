@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-sleuth'
+  Plug 'jiangmiao/auto-pairs'
 
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
