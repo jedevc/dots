@@ -175,7 +175,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 
 # mini window
-bindsym $mod+u fullscreen disable, floating enable, border none, sticky enable, resize set 600px 400px, move position 1300px 20px
+bindsym $mod+u fullscreen disable, floating enable, border none, sticky enable, resize set 600px 400px, move position 1300px 330px
 bindsym $mod+i floating disable, border normal, sticky disable
 
 # workspace bar
