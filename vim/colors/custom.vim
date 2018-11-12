@@ -7,9 +7,35 @@ if exists('syntax_on')
 endif
 let g:colors_name = 'custom'
 
-highlight LineNr ctermfg=darkgrey
+" GUI elements
+hi LineNr ctermfg=darkgrey
+hi Pmenu ctermfg=lightgrey ctermbg=darkgrey
+hi PmenuSel ctermfg=white ctermbg=grey
 
-hi Normal ctermfg=lightgrey  ctermbg=black
+hi ErrorMsg ctermfg=red ctermbg=black cterm=underline
+hi WarningMsg ctermfg=blue ctermbg=black cterm=underline
+
+" Code
+hi Normal ctermfg=lightgrey ctermbg=black
+hi Comment ctermfg=darkgrey ctermbg=black
+hi Special ctermfg=lightred ctermbg=black
+
+hi Constant ctermfg=red ctermbg=black cterm=italic
+hi String ctermfg=yellow ctermbg=black cterm=italic
+
+hi Identifier ctermfg=blue ctermbg=black cterm=none
+hi Function ctermfg=lightgrey ctermbg=black cterm=bold
+
+hi Type ctermfg=magenta ctermbg=black
+hi Statement ctermfg=blue ctermbg=black cterm=bold
+hi PreProc ctermfg=green ctermbg=black
+
+" Other
+hi Underlined ctermfg=blue ctermbg=black cterm=underline
+hi Todo ctermfg=yellow ctermbg=black cterm=underline
+hi SpellCap ctermfg=blue ctermbg=black cterm=underline
+hi Error ctermfg=red ctermbg=black cterm=underline
+hi SpellBad ctermfg=red ctermbg=black cterm=underline
 
 " hi Normal		guifg=yellow	guibg=darkBlue	ctermfg=yellow	ctermbg=darkBlue
 " hi NonText		guifg=magenta	ctermfg=lightMagenta
