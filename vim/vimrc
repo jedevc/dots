@@ -79,5 +79,4 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 
 " snippets
 " expand ultisnips on enter when the menu is open
-let g:UltiSnipsExpandTrigger = '<nop>'
-inoremap <expr> <CR> pumvisible() ? '<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>' : "\<CR>"
+let g:UltiSnipsExpandTrigger="<Insert>"
