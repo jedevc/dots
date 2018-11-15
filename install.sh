@@ -1,24 +1,25 @@
 #!/bin/bash
 
-# help message
-if [ $# -ge 1 ] && [[ $1 == '-h' ]]; then
-	echo "Usage: $0 [install path] [components]"
-	exit
-fi
+# argument parsing
+DESTINATION=$HOME
+while getopts "h:p:" flag; do
+	case $flag in
+	h)
+		echo "Usage: $0 [-p path] [components]"
+		exit 1
+		;;
+	p)
+		DESTINATION="$OPTARG"
+		;;
+	esac
+done
+shift $(( OPTIND - 1 ))
 
-# destination
-if [ -z $1 ]; then
-	DESTINATION=$HOME
+# rest of arguments are components
+if [[ $# -ge 1 ]]; then
+	COMPONENTS=$@
 else
-	DESTINATION=$1
-	mkdir -p $DESTINATION
-fi
-
-# components
-if [ -z $2 ]; then
 	COMPONENTS=all
-else
-	COMPONENTS=${@:2}
 fi
 
 # components checker
@@ -39,6 +40,8 @@ function shouldInstall {
 
 # actual install
 echo "Installing '$COMPONENTS' to $DESTINATION."
+mkdir -p $DESTINATION
+
 if shouldInstall scripts; then
 	echo "Installing scripts..."
 	cp -r bin/ $DESTINATION
