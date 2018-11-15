@@ -19,6 +19,11 @@ bindkey '^[[B' history-beginning-search-forward-end
 bindkey -a 'k' history-beginning-search-backward-end
 bindkey -a 'j' history-beginning-search-forward-end
 
+# fg widget
+function fg_function { fg }
+zle -N fg_widget fg_function
+bindkey '^F' fg_widget
+
 # pushd
 setopt AUTO_PUSHD PUSHD_IGNORE_DUPS PUSHD_MINUS PUSHD_TO_HOME
 
