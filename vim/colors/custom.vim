@@ -18,7 +18,7 @@ hi WarningMsg ctermfg=blue ctermbg=black cterm=underline
 " Code
 hi Normal ctermfg=lightgrey ctermbg=black
 hi Comment ctermfg=darkgrey ctermbg=black
-hi Special ctermfg=lightred ctermbg=black
+hi Special ctermfg=green ctermbg=black
 
 hi Constant ctermfg=red ctermbg=black cterm=italic
 hi String ctermfg=yellow ctermbg=black cterm=italic
@@ -36,6 +36,9 @@ hi Todo ctermfg=yellow ctermbg=black cterm=underline
 hi SpellCap ctermfg=blue ctermbg=black cterm=underline
 hi Error ctermfg=red ctermbg=black cterm=underline
 hi SpellBad ctermfg=red ctermbg=black cterm=underline
+
+" Title
+hi Title ctermfg=lightgreen ctermbg=black
 
 " hi Normal		guifg=yellow	guibg=darkBlue	ctermfg=yellow	ctermbg=darkBlue
 " hi NonText		guifg=magenta	ctermfg=lightMagenta
