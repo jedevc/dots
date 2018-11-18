@@ -40,6 +40,11 @@ hi SpellBad ctermfg=red ctermbg=black cterm=underline
 " Title
 hi Title ctermfg=lightgreen ctermbg=black
 
+" Visual
+hi Visual cterm=reverse
+hi Search cterm=underline ctermfg=cyan ctermbg=black
+hi IncSearch cterm=underline ctermfg=cyan ctermbg=black
+
 " hi Normal		guifg=yellow	guibg=darkBlue	ctermfg=yellow	ctermbg=darkBlue
 " hi NonText		guifg=magenta	ctermfg=lightMagenta
 " hi comment		guifg=gray		ctermfg=gray	ctermbg=darkBlue	gui=bold 
