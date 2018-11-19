@@ -1,28 +1,6 @@
-# set keymap for X
-setxkbmap gb
-
 # GTK/QT theming
 export QT_QPA_PLATFORMTHEME='qt5ct'
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
 
-# input settings
-xinput set-prop 11 'libinput Accel Speed' 0.5
-xinput set-prop 11 'libinput Tapping Enabled' 1
-xinput set-prop 12 'libinput Accel Speed' 0.6
-xset r rate 300 30
-xset dpms 0 0 180
-
-# autolock
-xss-lock -- i3lock -i ~/.wallpaper.png &
-
-# NetworkManager
-nm-applet &
-
-# Dropbox
-dropbox &
-
 # run ssh-agent
 eval $(ssh-agent)
-
-# wallpaper
-~/.fehbg &
