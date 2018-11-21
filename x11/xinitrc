@@ -21,7 +21,7 @@ dropbox &
 ~/.fehbg &
 
 # autolock
-xss-lock -- i3lock -n -i ~/.wallpaper.png &
+xss-lock -- .config/i3/locker.sh &
 
 # launch desktop
 compton -b
