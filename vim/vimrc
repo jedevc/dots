@@ -9,17 +9,20 @@ source $VIMRUNTIME/defaults.vim
 " plugins
 call plug#begin('~/.vim/plugged')
 
-  Plug 'scrooloose/nerdtree'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-  Plug 'airblade/vim-gitgutter'
+  " editing
   Plug 'tpope/vim-sleuth'
   Plug 'jiangmiao/auto-pairs'
 
+  " snippets
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
 
+  " GUI stuff
   Plug 'Valloric/YouCompleteMe'
+  Plug 'scrooloose/nerdtree'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
