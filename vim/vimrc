@@ -12,6 +12,8 @@ call plug#begin('~/.vim/plugged')
   " editing
   Plug 'tpope/vim-sleuth'
   Plug 'jiangmiao/auto-pairs'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-repeat'
 
   " snippets
   Plug 'SirVer/ultisnips'
