@@ -1,6 +1,6 @@
 [options]
 #allow_bold = true
-#audible_bell = false
+audible_bell = false
 #clickable_url = true
 #dynamic_title = true
 font = hack
@@ -87,5 +87,3 @@ color15 = #f5f5f5
 #border = #3f3f3f
 #border_width = 0.5
 #roundness = 2.0
-
-# vim: ft=dosini cms=#%s
