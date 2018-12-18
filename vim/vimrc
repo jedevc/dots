@@ -86,5 +86,9 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 " expand ultisnips on enter when the menu is open
 let g:UltiSnipsExpandTrigger="<Insert>"
 
+" default indentation settings
 set tabstop=4
 set shiftwidth=4
+
+" assorted keybindings
+noremap Y y$
