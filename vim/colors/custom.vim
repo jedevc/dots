@@ -1,10 +1,18 @@
 " Vim color file
 
-set background=dark
+" Reset background colors
+hi clear Normal
+set bg&
+
+" Remove all existing highlighting
 hi clear
+
+" Load syntax defaults
 if exists('syntax_on')
   syntax reset
 endif
+
+" Set colorscheme name
 let g:colors_name = 'custom'
 
 " GUI elements
@@ -12,42 +20,42 @@ hi LineNr ctermfg=darkgrey
 hi Pmenu ctermfg=lightgrey ctermbg=darkgrey
 hi PmenuSel ctermfg=white ctermbg=grey
 
-hi ErrorMsg ctermfg=red ctermbg=black cterm=underline
-hi WarningMsg ctermfg=blue ctermbg=black cterm=underline
+hi ErrorMsg ctermfg=red cterm=underline
+hi WarningMsg ctermfg=blue cterm=underline
 
 " Code
-hi Normal ctermfg=lightgrey ctermbg=black
-hi Comment ctermfg=darkgrey ctermbg=black
-hi Special ctermfg=green ctermbg=black
+hi Normal ctermfg=lightgrey
+hi Comment ctermfg=darkgrey
+hi Special ctermfg=green
 
-hi Constant ctermfg=red ctermbg=black cterm=italic
-hi String ctermfg=yellow ctermbg=black cterm=italic
+hi Constant ctermfg=red cterm=italic
+hi String ctermfg=yellow cterm=italic
 
-hi Identifier ctermfg=blue ctermbg=black cterm=none
-hi Function ctermfg=lightgrey ctermbg=black cterm=bold
+hi Identifier ctermfg=blue cterm=none
+hi Function ctermfg=lightgrey cterm=bold
 
-hi Type ctermfg=magenta ctermbg=black
-hi Statement ctermfg=blue ctermbg=black cterm=bold
-hi PreProc ctermfg=green ctermbg=black
+hi Type ctermfg=magenta
+hi Statement ctermfg=blue cterm=bold
+hi PreProc ctermfg=green
 
 " Other
-hi Underlined ctermfg=blue ctermbg=black cterm=underline
-hi Todo ctermfg=yellow ctermbg=black cterm=underline
-hi SpellCap ctermfg=blue ctermbg=black cterm=underline
-hi Error ctermfg=red ctermbg=black cterm=underline
-hi SpellBad ctermfg=red ctermbg=black cterm=underline
+hi Underlined ctermfg=blue cterm=underline
+hi Todo ctermfg=yellow cterm=underline
+hi SpellCap ctermfg=blue cterm=underline
+hi Error ctermfg=red cterm=underline
+hi SpellBad ctermfg=red cterm=underline
 
 " Title
-hi Title ctermfg=lightgreen ctermbg=black
+hi Title ctermfg=lightgreen
 
 " Visual
-hi Visual cterm=reverse
-hi Search cterm=underline ctermfg=cyan ctermbg=black
-hi IncSearch cterm=underline ctermfg=cyan ctermbg=black
+hi Visual ctermfg=black ctermbg=lightgrey
+hi Search cterm=underline ctermfg=cyan
+hi IncSearch cterm=underline ctermfg=cyan
 
 " hi Normal		guifg=yellow	guibg=darkBlue	ctermfg=yellow	ctermbg=darkBlue
 " hi NonText		guifg=magenta	ctermfg=lightMagenta
-" hi comment		guifg=gray		ctermfg=gray	ctermbg=darkBlue	gui=bold 
+" hi comment		guifg=gray		ctermfg=gray	ctermbg=darkBlue	gui=bold
 " hi constant		guifg=cyan		ctermfg=cyan
 " hi identifier	guifg=gray		ctermfg=red
 " hi statement	guifg=white		ctermfg=white	ctermbg=darkBlue	gui=none
@@ -57,31 +65,31 @@ hi IncSearch cterm=underline ctermfg=cyan ctermbg=black
 " hi Underlined	guifg=cyan		ctermfg=cyan	gui=underline	cterm=underline
 " hi label		guifg=yellow	ctermfg=yellow
 " hi operator		guifg=orange	gui=bold	ctermfg=lightRed	ctermbg=darkBlue
-" 
+"
 " hi ErrorMsg		guifg=orange	guibg=darkBlue	ctermfg=lightRed
 " hi WarningMsg	guifg=cyan		guibg=darkBlue	ctermfg=cyan	gui=bold
 " hi ModeMsg		guifg=yellow	gui=NONE	ctermfg=yellow
 " hi MoreMsg		guifg=yellow	gui=NONE	ctermfg=yellow
 " hi Error		guifg=red		guibg=darkBlue	gui=underline	ctermfg=red
-" 
+"
 " hi Todo			guifg=black		guibg=orange	ctermfg=black	ctermbg=darkYellow
 " hi Cursor		guifg=black		guibg=white		ctermfg=black	ctermbg=white
 " hi Search		guifg=black		guibg=orange	ctermfg=black	ctermbg=darkYellow
 " hi IncSearch	guifg=black		guibg=yellow	ctermfg=black	ctermbg=darkYellow
 " hi LineNr		guifg=cyan		ctermfg=cyan
 " hi title		guifg=white	gui=bold	cterm=bold
-" 
+"
 " hi StatusLineNC	gui=NONE	guifg=black guibg=blue	ctermfg=black  ctermbg=blue
 " hi StatusLine	gui=bold	guifg=cyan	guibg=blue	ctermfg=cyan   ctermbg=blue
 " hi VertSplit	gui=none	guifg=blue	guibg=blue	ctermfg=blue	ctermbg=blue
-" 
+"
 " hi Visual		term=reverse		ctermfg=black	ctermbg=darkCyan	guifg=black		guibg=darkCyan
-" 
+"
 " hi DiffChange	guibg=darkGreen		guifg=black	ctermbg=darkGreen	ctermfg=black
 " hi DiffText		guibg=olivedrab		guifg=black		ctermbg=lightGreen	ctermfg=black
 " hi DiffAdd		guibg=slateblue		guifg=black		ctermbg=blue		ctermfg=black
 " hi DiffDelete   guibg=coral			guifg=black	ctermbg=cyan		ctermfg=black
-" 
+"
 " hi Folded		guibg=orange		guifg=black		ctermbg=yellow		ctermfg=black
 " hi FoldColumn	guibg=gray30		guifg=black	ctermbg=gray		ctermfg=black
 " hi cIf0			guifg=gray			ctermfg=gray
