@@ -20,8 +20,8 @@ hi LineNr ctermfg=darkgrey
 hi Pmenu ctermfg=lightgrey ctermbg=darkgrey
 hi PmenuSel ctermfg=white ctermbg=grey
 
-hi ErrorMsg ctermfg=red cterm=underline
-hi WarningMsg ctermfg=blue cterm=underline
+hi ErrorMsg ctermfg=red ctermbg=none cterm=underline
+hi WarningMsg ctermfg=blue ctermbg=none cterm=underline
 
 " Code
 hi Normal ctermfg=lightgrey
@@ -40,18 +40,18 @@ hi PreProc ctermfg=green
 
 " Other
 hi Underlined ctermfg=blue cterm=underline
-hi Todo ctermfg=yellow cterm=underline
-hi SpellCap ctermfg=blue cterm=underline
-hi Error ctermfg=red cterm=underline
-hi SpellBad ctermfg=red cterm=underline
+hi Todo ctermfg=yellow ctermbg=none cterm=underline
+hi SpellCap ctermfg=blue ctermbg=none cterm=underline
+hi Error ctermfg=red ctermbg=none cterm=underline
+hi SpellBad ctermfg=red ctermbg=none cterm=underline
 
 " Title
 hi Title ctermfg=lightgreen
 
 " Visual
 hi Visual ctermfg=black ctermbg=lightgrey
-hi Search cterm=underline ctermfg=cyan
-hi IncSearch cterm=underline ctermfg=cyan
+hi Search cterm=underline ctermfg=cyan ctermbg=none
+hi IncSearch cterm=underline ctermfg=cyan ctermbg=none
 
 " hi Normal		guifg=yellow	guibg=darkBlue	ctermfg=yellow	ctermbg=darkBlue
 " hi NonText		guifg=magenta	ctermfg=lightMagenta
