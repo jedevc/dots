@@ -17,8 +17,10 @@
 ;==========================================================
 
 [colors]
-background = #20101010
-background-alt = #20404040
+;background = #20101010
+;background-alt = #20404040
+background = #101010
+background-alt = #404040
 
 foreground = #aaa
 foreground-alt = #eee
@@ -232,6 +234,12 @@ battery = BAT1
 
 [settings]
 screenchange-reload = true
+
+compositing-background = source
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
 
 [global/wm]
 margin-top = 0
