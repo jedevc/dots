@@ -167,7 +167,7 @@ for_window [class="^.*"] border pixel 1
 gaps inner 5
 # smart_gaps on
 
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: + - 0 (local), Shift + - 0 (global)
 mode "$mode_gaps_inner" {
     bindsym plus  gaps inner current plus 5
     bindsym minus gaps inner current minus 5
