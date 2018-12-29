@@ -59,7 +59,7 @@ if shouldInstall x11; then
 	./x11/install.sh $DESTINATION
 
 	echo "> Setting background..."
-	cp wallpaper-temple.png $DESTINATION/.wallpaper.png
+	cp wallpaper-city.png $DESTINATION/.wallpaper.png
 	feh --bg-scale $DESTINATION/.wallpaper.png
 fi
 echo "Done."
