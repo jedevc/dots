@@ -162,6 +162,43 @@ mode "$mode_system" {
 }
 bindsym $mod+Home mode "$mode_system"
 
+# gaps
+for_window [class="^.*"] border pixel 1
+gaps inner 5
+# smart_gaps on
+
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+mode "$mode_gaps_inner" {
+    bindsym plus  gaps inner current plus 5
+    bindsym minus gaps inner current minus 5
+    bindsym 0     gaps inner current set 0
+
+    bindsym Shift+plus  gaps inner all plus 5
+    bindsym Shift+minus gaps inner all minus 5
+    bindsym Shift+0     gaps inner all set 0
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+g mode "default"
+}
+bindsym $mod+g mode "$mode_gaps_inner"
+
+set $mode_gaps_outer Outer Gaps: + - 0 (local), Shift + - 0 (global)
+mode "$mode_gaps_outer" {
+    bindsym plus  gaps outer current plus 5
+    bindsym minus gaps outer current minus 5
+    bindsym 0     gaps outer current set 0
+
+    bindsym Shift+plus  gaps outer all plus 5
+    bindsym Shift+minus gaps outer all minus 5
+    bindsym Shift+0     gaps outer all set 0
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+Shift+g mode "default"
+}
+bindsym $mod+Shift+g mode "$mode_gaps_outer"
+
 # screen locking
 bindsym $mod+Escape exec --no-startup-id ~/.config/i3/locker.sh
 
