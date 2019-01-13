@@ -112,6 +112,9 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# toggle workspace screen
+bindsym $mod+x move workspace to output right
+
 # scratchpad
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
@@ -211,12 +214,6 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 
-# workspace bar
-# bar {
-#     status_command i3status
-# }
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
 # borders
 smart_borders on
 
@@ -229,3 +226,10 @@ client.urgent           #ac0000 #900000 #000000 #ac0000   #ac0000
 client.placeholder      #000000 #000000 #ffffff #000000   #000000
 
 client.background       #ffffff
+
+# background programs
+# exec_always --no-startup-id autorandr --change
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id $HOME/.compton-launch.sh
+# exec_always --no-startup-id $HOME/.fehbg
+exec_always --no-startup-id "autorandr --change; $HOME/.fehbg; $HOME/.config/polybar/launch.sh; $HOME/.compton-launch.sh"

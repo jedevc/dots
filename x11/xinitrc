@@ -17,12 +17,8 @@ nm-applet &
 # Dropbox
 dropbox &
 
-# wallpaper
-~/.fehbg &
-
 # autolock
 xss-lock -- .config/i3/locker.sh &
 
 # launch desktop
-compton -b
 exec i3
