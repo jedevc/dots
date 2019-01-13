@@ -10,8 +10,8 @@ fi
 file=$1
 command=${@:2}
 
-# process
+# run command in loop
 while [[ true ]]; do
-	inotifywait -q --event modify $file > /dev/null
 	eval $command
+	inotifywait -q --event modify $file > /dev/null
 done
