@@ -228,8 +228,4 @@ client.placeholder      #000000 #000000 #ffffff #000000   #000000
 client.background       #ffffff
 
 # background programs
-# exec_always --no-startup-id autorandr --change
-# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-# exec_always --no-startup-id $HOME/.compton-launch.sh
-# exec_always --no-startup-id $HOME/.fehbg
 exec_always --no-startup-id "autorandr --change; $HOME/.fehbg; $HOME/.config/polybar/launch.sh; $HOME/.compton-launch.sh"
