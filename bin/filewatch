@@ -2,8 +2,8 @@
 
 # show help
 if [[ -z $1 || $1 == '-h' || $1 == '--help' ]]; then
-	echo "$0 usage: filename command"
-	exit 1
+    echo "$0 usage: filename command"
+    exit 1
 fi
 
 # parse command line arguments
@@ -11,7 +11,7 @@ file=$1
 command=${@:2}
 
 # run command in loop
-while [[ true ]]; do
-	eval $command
-	inotifywait -q --event modify $file > /dev/null
+while [[ -f $file ]]; do
+    eval $command
+    inotifywait -q --event modify $file > /dev/null
 done
