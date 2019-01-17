@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [[ -z $1 || $1 == '-h' || $1 == '--help' ]]; then
+    echo "$0 usage: filename"
+	exit 1
+fi
+
+tmpfile=`mktemp -u /tmp/mumdXXXXXXXXXX.pdf`
+
+filewatch $1 pandoc $1 -o $tmpfile &
+while [[ ! -f $tmpfile ]]; do
+    sleep 0.05
+done
+mupdf $tmpfile
