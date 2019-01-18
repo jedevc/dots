@@ -12,3 +12,5 @@ while [[ ! -f $tmpfile ]]; do
     sleep 0.05
 done
 mupdf $tmpfile
+
+rm $tmpfile
