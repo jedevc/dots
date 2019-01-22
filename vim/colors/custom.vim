@@ -38,13 +38,6 @@ hi Type ctermfg=magenta
 hi Statement ctermfg=blue cterm=bold
 hi PreProc ctermfg=green
 
-" Other
-hi Underlined ctermfg=blue cterm=underline
-hi Todo ctermfg=yellow ctermbg=none cterm=underline
-hi SpellCap ctermfg=blue ctermbg=none cterm=underline
-hi Error ctermfg=red ctermbg=none cterm=underline
-hi SpellBad ctermfg=red ctermbg=none cterm=underline
-
 " Title
 hi Title ctermfg=lightgreen
 
@@ -52,3 +45,11 @@ hi Title ctermfg=lightgreen
 hi Visual ctermfg=black ctermbg=lightgrey
 hi Search cterm=underline ctermfg=cyan ctermbg=none
 hi IncSearch cterm=underline ctermfg=cyan ctermbg=none
+hi Folded ctermfg=darkgrey ctermbg=none
+
+" Other
+hi Underlined ctermfg=blue cterm=underline
+hi Todo ctermfg=yellow ctermbg=none cterm=underline
+hi SpellCap ctermfg=blue ctermbg=none cterm=underline
+hi Error ctermfg=red ctermbg=none cterm=underline
+hi SpellBad ctermfg=red ctermbg=none cterm=underline
