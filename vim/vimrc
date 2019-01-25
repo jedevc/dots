@@ -67,6 +67,7 @@ endif
 
 " gutter
 set number
+set relativenumber
 map <C-n> :NERDTreeToggle<CR>
 
 " theming
