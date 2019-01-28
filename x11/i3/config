@@ -167,7 +167,7 @@ bindsym $mod+Home mode "$mode_system"
 
 # gaps
 for_window [class="^.*"] border pixel 1
-gaps inner 5
+gaps inner 0
 # smart_gaps on
 
 set $mode_gaps_inner Inner Gaps: + - 0 (local), Shift + - 0 (global)
