@@ -16,6 +16,6 @@ filewatch $1 pandoc $1 -o $tmpfile &
 while [[ ! -f $tmpfile ]]; do
     sleep 0.05
 done
-mupdf $tmpfile
+zathura $tmpfile
 
 rm $tmpfile
