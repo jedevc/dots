@@ -146,7 +146,7 @@ bindsym $mod+r mode "resize"
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+r exec "killall -w compton", restart
 
 # system commands
 set $mode_system System (l)ock, (e)xit, (p)oweroff, (r)eboot, (s)uspend, (h)ibernate
@@ -228,4 +228,4 @@ client.placeholder      #000000 #000000 #ffffff #000000   #000000
 client.background       #ffffff
 
 # background programs
-exec_always --no-startup-id "autorandr --change; $HOME/.fehbg; $HOME/.config/polybar/launch.sh; $HOME/.compton-launch.sh"
+exec_always --no-startup-id "autorandr --change; $HOME/.fehbg; $HOME/.config/polybar/launch.sh; compton -b"

@@ -8,7 +8,6 @@ cp $SOURCE/xprofile $DESTINATION/.xprofile
 
 mkdir -p $DESTINATION/.config
 cp $SOURCE/compton/compton.conf $DESTINATION/.config
-cp $SOURCE/compton/compton-launch.sh $DESTINATION/.compton-launch.sh
 cp -r $SOURCE/i3 $DESTINATION/.config
 cp -r $SOURCE/rofi $DESTINATION/.config
 cp -r $SOURCE/termite $DESTINATION/.config
