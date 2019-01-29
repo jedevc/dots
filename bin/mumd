@@ -13,6 +13,11 @@ fi
 tmpfile=`mktemp -u /tmp/mumdXXXXXXXXXX.pdf`
 
 filewatch $1 pandoc $1 -o $tmpfile &
+FILEWATCH_PID=$!
+
+trap "exit" INT TERM
+trap "kill $FILEWATCH_PID" EXIT
+
 while [[ ! -f $tmpfile ]]; do
     sleep 0.05
 done
