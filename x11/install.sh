@@ -7,7 +7,7 @@ cp $SOURCE/xinitrc $DESTINATION/.xinitrc
 cp $SOURCE/xprofile $DESTINATION/.xprofile
 
 mkdir -p $DESTINATION/.config
-cp $SOURCE/compton/compton.conf $DESTINATION/.config
+cp $SOURCE/compton.conf $DESTINATION/.config
 cp -r $SOURCE/i3 $DESTINATION/.config
 cp -r $SOURCE/rofi $DESTINATION/.config
 cp -r $SOURCE/termite $DESTINATION/.config
