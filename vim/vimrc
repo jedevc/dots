@@ -65,6 +65,9 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
+" clipboard
+set clipboard=unnamedplus
+
 " gutter
 set number
 set relativenumber
