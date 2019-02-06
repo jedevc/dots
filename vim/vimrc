@@ -100,3 +100,11 @@ set tabstop=4
 
 " assorted keybindings
 noremap Y y$
+nmap <silent> sj :wincmd j<CR>
+nmap <silent> sk :wincmd k<CR>
+nmap <silent> sh :wincmd h<CR>
+nmap <silent> sl :wincmd l<CR>
+nmap <silent> sJ :wincmd J<CR>
+nmap <silent> sK :wincmd K<CR>
+nmap <silent> sH :wincmd H<CR>
+nmap <silent> sL :wincmd L<CR>
