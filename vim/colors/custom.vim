@@ -53,3 +53,8 @@ hi Todo ctermfg=yellow ctermbg=none cterm=underline
 hi SpellCap ctermfg=blue ctermbg=none cterm=underline
 hi Error ctermfg=red ctermbg=none cterm=underline
 hi SpellBad ctermfg=red ctermbg=none cterm=underline
+
+" GitGutter
+hi GitGutterAdd ctermfg=green
+hi GitGutterChange ctermfg=yellow
+hi GitGutterDelete ctermfg=red
