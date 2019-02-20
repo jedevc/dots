@@ -26,6 +26,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 
+  " Misc
+  Plug 'jpalardy/vim-slime'
+
 call plug#end()
 
 " backups
@@ -75,7 +78,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 " theming
 colorscheme custom
-
 let g:airline_theme='term'
 if !has('gui_running')
   let g:airline_powerline_fonts = 1
@@ -89,6 +91,9 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 " snippets
 " expand ultisnips on enter when the menu is open
 let g:UltiSnipsExpandTrigger="<Insert>"
+
+" slime
+let g:slime_target = 'vimterminal'
 
 " folding
 set foldmethod=syntax
