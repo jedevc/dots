@@ -20,7 +20,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'honza/vim-snippets'
 
   " GUI stuff
-  Plug 'Valloric/YouCompleteMe'
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --java-completer --ts-completer --go-completer' }
   Plug 'scrooloose/nerdtree'
   Plug 'airblade/vim-gitgutter'
   Plug 'vim-airline/vim-airline'
@@ -85,6 +85,7 @@ endif
 
 " autocompletion
 set completeopt=menu,longest,preview
+let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
 let g:ycm_filetype_blacklist={}
 let g:ycm_autoclose_preview_window_after_insertion=1
 
@@ -105,6 +106,7 @@ set tabstop=4
 
 " assorted keybindings
 noremap Y y$
+nmap <silent> ss :wincmd w<CR>
 nmap <silent> sj :wincmd j<CR>
 nmap <silent> sk :wincmd k<CR>
 nmap <silent> sh :wincmd h<CR>

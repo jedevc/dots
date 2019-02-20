@@ -14,3 +14,5 @@ if [ ! -f $PLUG ]; then
 	curl -fLo $PLUG --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 vim -c 'PlugInstall|qall'
+
+cp $SOURCE/ycm_extra_conf.py $DESTINATION/.vim
