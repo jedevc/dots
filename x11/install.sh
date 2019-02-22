@@ -14,4 +14,6 @@ cp -r $SOURCE/zathura $DESTINATION/.config
 cp -r $SOURCE/termite $DESTINATION/.config
 cp -r $SOURCE/polybar $DESTINATION/.config
 
+cp $SOURCE/applications/* $DESTINATION/.local/share/applications
+
 $SOURCE/themes/install.sh $DESTINATION
