@@ -35,7 +35,6 @@ zstyle ':completion:*' rehash true
 setopt COMPLETE_ALIASES
 
 # colors
-export TERM='xterm-256color'
 autoload -U colors && colors
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -66,6 +65,7 @@ fi
 # find zsh-autosuggestions
 if [[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
 	source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+	ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=40
 fi
 
 # window title (borrowed from ArchWiki)
