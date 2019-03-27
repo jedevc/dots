@@ -39,6 +39,9 @@ autoload -U colors && colors
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
+# aliases
+alias e='emacsclient -c'
+
 # prompt
 PROMPT="%F{blue}%1~%f %% "
 if [[ $DISPLAY ]]; then
