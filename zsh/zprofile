@@ -1,11 +1,14 @@
 # set PATH
+## generic
 export PATH=$PATH:~/bin:~/.local/bin
-
+## ruby gems
 for f in ~/.gem/ruby/*; do
 	PATH=$PATH:$f/bin
 done
-
+## go
 PATH=$PATH:~/go/bin
+## rust
+PATH=$PATH:~/.cargo/bin
 
 # startx
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
