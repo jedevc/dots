@@ -31,7 +31,6 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     javascript
      helm
      auto-completion
      better-defaults
@@ -43,6 +42,8 @@ values."
      asm
      c-c++
      python
+     rust
+     javascript
      html
      markdown
      latex
