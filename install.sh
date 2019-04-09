@@ -56,8 +56,7 @@ if shouldInstall vim; then
 fi
 if shouldInstall spacemacs; then
 	echo "Installing spacemacs..."
-
-	cp spacemacs $DESTINATION/.spacemacs
+	./spacemacs/install.sh $DESTINATION
 fi
 if shouldInstall x11; then
 	echo "Installing x11..."

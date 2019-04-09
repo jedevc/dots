@@ -140,7 +140,7 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Hack"
+   dotspacemacs-default-font '("Fira Code"
                                :size 14
                                :weight normal
                                :width normal
@@ -320,6 +320,9 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq evil-search-module 'evil-search) 
   )
+
+(add-to-list 'load-path "~/.spacemacs.d")
+(require 'fira-code-mode)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
