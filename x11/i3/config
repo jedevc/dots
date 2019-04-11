@@ -214,6 +214,10 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 
+# screenshots
+bindsym Print exec --no-startup-id gnome-screenshot
+bindsym $mod+Print exec --no-startup-id gnome-screenshot -a
+
 # borders
 smart_borders on
 
