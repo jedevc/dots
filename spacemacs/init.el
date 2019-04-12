@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     haskell
      helm
      auto-completion
      better-defaults
@@ -46,10 +47,13 @@ values."
      rust
      javascript
      ipython-notebook
+     emacs-lisp
+     haskell
+     agda
      html
      markdown
      latex
-     emacs-lisp
+     pandoc
      shell
      (shell :variables
             shell-default-height 30
@@ -318,8 +322,9 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (setq evil-search-module 'evil-search) 
+  (setq evil-search-module 'evil-search)
   (add-hook 'rust-mode-hook 'fira-code-mode)
+  (add-hook 'haskell-mode-hook 'fira-code-mode)
   )
 
 (add-to-list 'load-path "~/.spacemacs.d")
