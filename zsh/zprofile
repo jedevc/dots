@@ -2,9 +2,11 @@
 ## generic
 export PATH=$PATH:~/bin:~/.local/bin
 ## ruby gems
-for f in ~/.gem/ruby/*; do
-	PATH=$PATH:$f/bin
-done
+if [[ -f ~/.gem/ruby/ ]]; then
+	for f in ~/.gem/ruby/*; do
+		PATH=$PATH:$f/bin
+	done
+fi
 ## go
 PATH=$PATH:~/go/bin
 ## rust
