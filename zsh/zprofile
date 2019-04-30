@@ -1,8 +1,8 @@
 # set PATH
 ## generic
-export PATH=$PATH:~/bin:~/.local/bin
+PATH=$PATH:~/bin:~/.local/bin
 ## ruby gems
-if [[ -f ~/.gem/ruby/ ]]; then
+if [[ -d ~/.gem/ruby/ ]]; then
 	for f in ~/.gem/ruby/*; do
 		PATH=$PATH:$f/bin
 	done
@@ -11,6 +11,8 @@ fi
 PATH=$PATH:~/go/bin
 ## rust
 PATH=$PATH:~/.cargo/bin
+
+export PATH
 
 # startx
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
