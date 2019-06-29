@@ -15,12 +15,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-repeat'
 
-  " snippets
-  Plug 'SirVer/ultisnips'
-  Plug 'honza/vim-snippets'
-
   " GUI stuff
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --java-completer --ts-completer --go-completer' }
   Plug 'scrooloose/nerdtree'
   Plug 'airblade/vim-gitgutter'
   Plug 'vim-airline/vim-airline'
