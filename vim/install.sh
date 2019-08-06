@@ -15,4 +15,3 @@ if [ ! -f $PLUG ]; then
 fi
 vim -c 'PlugInstall|qall'
 
-cp $SOURCE/ycm_extra_conf.py $DESTINATION/.vim
