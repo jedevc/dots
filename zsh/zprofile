@@ -8,13 +8,17 @@ if [[ -d ~/.gem/ruby/ ]]; then
 	done
 fi
 ## go
-PATH=$PATH:~/go/bin
+if [[ -d ~/go/bin/ ]]; then
+	PATH=$PATH:~/go/bin
+fi
 ## rust
-PATH=$PATH:~/.cargo/bin
+if [[ -d ~/.cargo/bin/ ]]; then
+	PATH=$PATH:~/.cargo/bin
+fi
+## dotnet
+if [[ -d ~/.dotnet/tools/ ]]; then
+	PATH=$PATH:~/.dotnet/tools
+fi
 
 export PATH
 
-# startx
-if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-	exec startx
-fi
