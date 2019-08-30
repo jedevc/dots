@@ -18,6 +18,10 @@ bindkey '^[[A' history-beginning-search-backward-end
 bindkey '^[[B' history-beginning-search-forward-end
 bindkey -a 'k' history-beginning-search-backward-end
 bindkey -a 'j' history-beginning-search-forward-end
+bindkey -a '/' history-incremental-pattern-search-backward
+
+# delay fix
+export KEYTIMEOUT=1
 
 # fg widget
 function fg_function { fg }
@@ -38,9 +42,6 @@ setopt COMPLETE_ALIASES
 autoload -U colors && colors
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-
-# aliases
-alias e='emacsclient -c'
 
 # prompt
 PROMPT="%F{blue}%1~%f %% "
