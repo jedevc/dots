@@ -11,7 +11,7 @@ file=$1
 command=${@:2}
 
 # run command in loop
-while [[ -f $file ]]; do
+while [[ -f "$file" ]]; do
     eval $command
-    inotifywait -q --event modify $file > /dev/null
+    inotifywait -q --event modify "$file" > /dev/null
 done

@@ -12,7 +12,7 @@ fi
 
 tmpfile=`mktemp -u /tmp/mumdXXXXXXXXXX.pdf`
 
-filewatch $1 pandoc $@ -o $tmpfile &
+filewatch "$1" "pandoc '$1' -o '$tmpfile'" &
 FILEWATCH_PID=$!
 
 trap "exit" INT TERM
