@@ -19,6 +19,7 @@ bindkey '^[[B' history-beginning-search-forward-end
 bindkey -a 'k' history-beginning-search-backward-end
 bindkey -a 'j' history-beginning-search-forward-end
 bindkey -a '/' history-incremental-pattern-search-backward
+bindkey '^R' history-incremental-search-backward
 
 # delay fix
 export KEYTIMEOUT=1
