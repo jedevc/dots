@@ -2,15 +2,26 @@
 
 # argument parsing
 DESTINATION=$HOME
-while getopts "h:p:" flag; do
+while getopts "hp:" flag; do
 	case $flag in
 	h)
-		echo "Usage: $0 [-p path] [components]"
+		cat <<-"EOF"
+		Usage: $0 [-p path] [components]
+
+		components:
+			- scripts
+			- vim
+			- zsh
+		EOF
+
 		exit 1
 		;;
 	p)
 		DESTINATION="$OPTARG"
 		;;
+	\?)
+		echo "See \"$0 -h\""
+		exit 1
 	esac
 done
 shift $(( OPTIND - 1 ))
@@ -53,17 +64,5 @@ fi
 if shouldInstall vim; then
 	echo "Installing vim..."
 	./vim/install.sh $DESTINATION
-fi
-if shouldInstall spacemacs; then
-	echo "Installing spacemacs..."
-	./spacemacs/install.sh $DESTINATION
-fi
-if shouldInstall x11; then
-	echo "Installing x11..."
-	./x11/install.sh $DESTINATION
-
-	echo "> Setting background..."
-	cp wallpaper-city.png $DESTINATION/.wallpaper.png
-	feh --bg-scale $DESTINATION/.wallpaper.png
 fi
 echo "Done."
