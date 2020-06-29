@@ -47,28 +47,34 @@ alias grep='grep --color=auto'
 # prompt
 PROMPT="%F{blue}%1~%f %% "
 if [[ $DISPLAY ]]; then
-	if [[ -f ~/.p10k.zsh ]]; then
-		source ~/.p10k.zsh
-	else
-		POWERLEVEL9K_MODE='awesome-fontconfig'
-		POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir)
-		POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv vcs)
-		POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
-	fi
-
 	# find powerlevel
-	if [[ -f /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme ]]; then
+	if [[ -f ~/powerlevel10k/powerlevel10k.zsh-theme ]]; then
+		# 10k
+		source ~/powerlevel10k/powerlevel10k.zsh-theme
+		USE_10K=true
+	elif [[ -f /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme ]]; then
 		# 10k
 		source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+		USE_10K=true
 	elif [[ -f /usr/share/powerlevel10k/powerlevel10k.zsh-theme ]]; then
 		# 10k (alternative install location)
 		source /usr/share/powerlevel10k/powerlevel10k.zsh-theme
+		USE_10K=true
 	elif [[ -f /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme ]]; then
 		# 9k
 		source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 	elif [[ -f /usr/share/powerlevel9k/powerlevel9k.zsh-theme ]]; then
 		# 9k (alternative install location)
 		source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
+	fi
+
+	if [[ -n $USE_10K ]] && [[ -f ~/.p10k.zsh ]]; then
+		source ~/.p10k.zsh
+	else
+		POWERLEVEL9K_MODE='awesome-fontconfig'
+		POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir)
+		POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv vcs)
+		POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
 	fi
 fi
 
@@ -82,6 +88,9 @@ fi
 # find zsh-autosuggestions
 if [[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
 	source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+	ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=40
+elif [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+	source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 	ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=40
 fi
 

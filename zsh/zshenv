@@ -1,24 +1,25 @@
 export VISUAL=vim
 export EDITOR=vim
 
-# generic
+export DEBIAN_PREVENT_KEYBOARD_CHANGES=yes
+
 PATH=$PATH:~/bin:~/.local/bin
-# ruby gems
 if [[ -d ~/.gem/ruby/ ]]; then
+	# ruby gems
 	for f in ~/.gem/ruby/*; do
 		PATH=$PATH:$f/bin
 	done
 fi
-# go
 if [[ -d ~/go/bin/ ]]; then
+	# golang
 	PATH=$PATH:~/go/bin
 fi
-# rust
 if [[ -d ~/.cargo/bin/ ]]; then
+	# rust cargo
 	PATH=$PATH:~/.cargo/bin
 fi
-# dotnet
 if [[ -d ~/.dotnet/tools/ ]]; then
+	# dotnet
 	PATH=$PATH:~/.dotnet/tools
 fi
 export PATH
