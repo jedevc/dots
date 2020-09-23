@@ -94,6 +94,9 @@ elif [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
 	ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=40
 fi
 
+# direnv
+eval "$(direnv hook zsh 2>/dev/null)"
+
 # window title (borrowed from ArchWiki)
 autoload -Uz add-zsh-hook
 function xterm_title_precmd () {
