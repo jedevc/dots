@@ -18,6 +18,10 @@ if [[ -d ~/.cargo/bin/ ]]; then
 	# rust cargo
 	PATH=$PATH:~/.cargo/bin
 fi
+if [[ -d ~/.npm-global/ ]]; then
+	# npm
+	PATH=$PATH:~/.npm-global/bin/
+fi
 if [[ -d ~/.dotnet/tools/ ]]; then
 	# dotnet
 	PATH=$PATH:~/.dotnet/tools
