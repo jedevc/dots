@@ -37,6 +37,7 @@ autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*' rehash true
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
 setopt COMPLETE_ALIASES
 
 # colors
@@ -110,3 +111,4 @@ if [[ "$TERM" == (screen*|xterm*|rxvt*) ]]; then
 	add-zsh-hook -Uz precmd xterm_title_precmd
 	add-zsh-hook -Uz preexec xterm_title_preexec
 fi
+
