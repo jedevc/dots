@@ -9,21 +9,22 @@ Install everything (probably not what you want):
 ```bash
 $ git clone https://github.com/jedevc/dots.git
 $ cd dots
-$ ./install.sh
+$ python -m dots install all
 ```
 
 Install only zsh themes:
 
 ```bash
-$ ./install.sh zsh
+$ python -m dots install zsh
 ```
 
 Install only vim themes:
 
 ```bash
-$ ./install.sh vim
+$ python -m dots install spacevim
 ```
 
 ## Licensing
 
 These dotfiles are licensed under the UNLICENSE. Do whatever you want.
+
