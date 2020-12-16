@@ -26,13 +26,12 @@ def main():
 
 
 def action_list(args):
+    """
+    List all available modules.
+    """
+
     module_root = Path("modules/")
-    modules = set()
-    for module in load_modules(module_root):
-        if module.name in modules:
-            print(f"Woops! {module.name} exists in two places!")
-            sys.exit(1)
-        modules.add(module.name)
+    modules = load_modules(module_root)
 
     print("Available modules:")
     for module in modules:
@@ -40,15 +39,14 @@ def action_list(args):
 
 
 def action_install(args):
+    """
+    Install specified modules (and their dependencies).
+    """
+
     dest = Path(args.dest)
 
     module_root = Path("modules/")
-    modules = {}
-    for module in load_modules(module_root):
-        if module.name in modules:
-            print(f"Woops! {module.name} exists in two places!")
-            sys.exit(1)
-        modules[module.name] = module
+    modules = load_modules(module_root)
 
     try:
         candidates = {modules[target] for target in args.targets}
