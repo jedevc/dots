@@ -50,22 +50,22 @@ PROMPT="%F{blue}%1~%f %% "
 if [[ $DISPLAY ]]; then
 	# find powerlevel
 	if [[ -f ~/powerlevel10k/powerlevel10k.zsh-theme ]]; then
-		# 10k
+		# 10k (user location)
 		source ~/powerlevel10k/powerlevel10k.zsh-theme
 		USE_10K=true
 	elif [[ -f /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme ]]; then
-		# 10k
+		# 10k (installed location)
 		source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 		USE_10K=true
 	elif [[ -f /usr/share/powerlevel10k/powerlevel10k.zsh-theme ]]; then
-		# 10k (alternative install location)
+		# 10k (alternative installed location)
 		source /usr/share/powerlevel10k/powerlevel10k.zsh-theme
 		USE_10K=true
 	elif [[ -f /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme ]]; then
-		# 9k
+		# 9k (installed location)
 		source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 	elif [[ -f /usr/share/powerlevel9k/powerlevel9k.zsh-theme ]]; then
-		# 9k (alternative install location)
+		# 9k (alternative installed location)
 		source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
 	fi
 
@@ -95,9 +95,6 @@ elif [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
 	ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=40
 fi
 
-# direnv
-eval "$(direnv hook zsh 2>/dev/null)"
-
 # window title (borrowed from ArchWiki)
 autoload -Uz add-zsh-hook
 function xterm_title_precmd () {
@@ -110,5 +107,17 @@ function xterm_title_preexec () {
 if [[ "$TERM" == (screen*|xterm*|rxvt*) ]]; then
 	add-zsh-hook -Uz precmd xterm_title_precmd
 	add-zsh-hook -Uz preexec xterm_title_preexec
+fi
+
+# direnv
+if command -v direnv &> /dev/null
+then
+	eval "$(direnv hook zsh 2>/dev/null)"
+fi
+
+# aliases
+if command -v nvim &> /dev/null
+then
+	alias vim="nvim"
 fi
 
