@@ -110,14 +110,12 @@ if [[ "$TERM" == (screen*|xterm*|rxvt*) ]]; then
 fi
 
 # direnv
-if command -v direnv &> /dev/null
-then
+if command -v direnv &> /dev/null; then
 	eval "$(direnv hook zsh 2>/dev/null)"
 fi
 
 # aliases
-if command -v nvim &> /dev/null
-then
+if command -v nvim &> /dev/null; then
 	alias vim="nvim"
 fi
 
