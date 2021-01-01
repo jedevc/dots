@@ -1,5 +1,6 @@
 function! myspacevim#before() abort
-    set timeoutlen=0
+    set timeoutlen=200
+
     call SpaceVim#plugins#tasks#reg_provider(funcref('s:make_tasks'))
 endfunction
 

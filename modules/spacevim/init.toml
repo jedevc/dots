@@ -15,7 +15,7 @@
     bootstrap_before = "myspacevim#before"
     bootstrap_after = "myspacevim#after"
 
-    windows_smartclose = ""
+    windows_smartclose = "Q"
     escape_key_binding = ""
 
     autocomplete_method = "coc"
@@ -55,6 +55,7 @@
     name = "lang#markdown"
 [[layers]]
     name = "lang#sh"
+
 [[custom_plugins]]
     repo = "tpope/vim-sleuth"
 
