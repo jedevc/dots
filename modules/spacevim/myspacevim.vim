@@ -1,6 +1,8 @@
 function! myspacevim#before() abort
     set timeoutlen=400
 
+    let g:tex_conceal=""
+
     call SpaceVim#plugins#tasks#reg_provider(funcref('s:make_tasks'))
 endfunction
 
