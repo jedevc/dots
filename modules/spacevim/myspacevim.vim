@@ -7,6 +7,11 @@ function! myspacevim#before() abort
 endfunction
 
 function! myspacevim#after() abort
+    syntax match todoCheckbox "\[\ \]" conceal cchar=
+    syntax match todoCheckbox "\[/\]" conceal cchar=
+    syntax match todoCheckbox "\[x\]" conceal cchar=
+    syntax match todoCheckbox "\[!\]" conceal cchar=
+    hi def link todoCheckbox Todo
 endfunction
 
 function! s:make_tasks() abort
