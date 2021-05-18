@@ -42,11 +42,16 @@
     filetypes = [
         "c",
         "cpp",
+        "go",
         "python",
         "rust"
     ]
+    [layers.override_cmd]
+        go = ["gopls"]
 [[layers]]
     name = "lang#c"
+[[layers]]
+    name = "lang#go"
 [[layers]]
     name = "lang#rust"
 [[layers]]
