@@ -33,7 +33,7 @@
 [[layers]]
     name = "sudo"
 [[layers]]
-    name = "denite"
+    name = "fzf"
 [[layers]]
     name = "VersionControl"
 
