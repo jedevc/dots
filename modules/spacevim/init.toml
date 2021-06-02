@@ -21,6 +21,9 @@
     autocomplete_method = "coc"
 
 [[layers]]
+    name = "ui"
+    enable_indentline = true
+[[layers]]
     name = "autocomplete"
     auto_completion_return_key_behavior = "complete"
     auto_completion_tab_key_behavior = "smart"

@@ -2,16 +2,12 @@ function! myspacevim#before() abort
     set timeoutlen=400
 
     let g:tex_conceal=""
+    set list lcs=tab:\┊\ " (the space is important)
 
     call SpaceVim#plugins#tasks#reg_provider(funcref('s:make_tasks'))
 endfunction
 
 function! myspacevim#after() abort
-    syntax match todoCheckbox "\[\ \]" conceal cchar=
-    syntax match todoCheckbox "\[/\]" conceal cchar=
-    syntax match todoCheckbox "\[x\]" conceal cchar=
-    syntax match todoCheckbox "\[!\]" conceal cchar=
-    hi def link todoCheckbox Todo
 endfunction
 
 function! s:make_tasks() abort
