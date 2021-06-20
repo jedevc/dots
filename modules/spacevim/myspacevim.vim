@@ -1,7 +1,11 @@
 function! myspacevim#before() abort
     set timeoutlen=400
+    set ignorecase
+    set smartcase
 
     let g:tex_conceal=""
+
+    " indent marker (spaces are handled in layers)
     set list lcs=tab:\┊\ " (the space is important)
 
     call SpaceVim#plugins#tasks#reg_provider(funcref('s:make_tasks'))
