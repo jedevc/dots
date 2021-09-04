@@ -61,21 +61,10 @@ if [[ $DISPLAY ]]; then
 		# 10k (alternative installed location)
 		source /usr/share/powerlevel10k/powerlevel10k.zsh-theme
 		USE_10K=true
-	elif [[ -f /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme ]]; then
-		# 9k (installed location)
-		source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
-	elif [[ -f /usr/share/powerlevel9k/powerlevel9k.zsh-theme ]]; then
-		# 9k (alternative installed location)
-		source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
 	fi
 
 	if [[ -n $USE_10K ]] && [[ -f ~/.p10k.zsh ]]; then
 		source ~/.p10k.zsh
-	else
-		POWERLEVEL9K_MODE='awesome-fontconfig'
-		POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir)
-		POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv vcs)
-		POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
 	fi
 fi
 
