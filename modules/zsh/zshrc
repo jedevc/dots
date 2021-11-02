@@ -84,6 +84,18 @@ elif [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
 	ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=40
 fi
 
+# find fzf
+if [[ -f /usr/share/fzf/completion.zsh ]]; then
+	source /usr/share/fzf/completion.zsh
+elif [[ -f /usr/share/doc/fzf/examples/completion.zsh ]]; then
+	source /usr/share/doc/fzf/examples/completion.zsh
+fi
+if [[ -f /usr/share/fzf/key-bindings.zsh ]]; then
+	source /usr/share/fzf/key-bindings.zsh
+elif [[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]]; then
+	source /usr/share/doc/fzf/examples/key-bindings.zsh
+fi
+
 # window title (borrowed from ArchWiki)
 autoload -Uz add-zsh-hook
 function xterm_title_precmd () {
