@@ -79,9 +79,11 @@ fi
 if [[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
 	source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 	ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=40
+	ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-beginning-search-backward-end history-beginning-search-forward-end)
 elif [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
 	source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 	ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=40
+	ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-beginning-search-backward-end history-beginning-search-forward-end)
 fi
 
 # find fzf
