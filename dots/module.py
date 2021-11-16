@@ -165,7 +165,7 @@ class Hook:
             print("-" * 80)
         print(script.strip())
         print("=" * 80)
-        if confirm("Run script?"):
+        if confirm("Run script?", default=False):
             print(f"Running {self.url}")
             return True
         else:

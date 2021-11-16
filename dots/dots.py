@@ -60,7 +60,7 @@ def action_install(args):
         sys.exit(1)
 
     print(f"Will install: {', '.join(c.name for c in candidates)}")
-    if not confirm("install?"):
+    if not confirm("install?", default=True):
         return
 
     for mod in candidates:
