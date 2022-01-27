@@ -2,6 +2,9 @@ call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-commentary'
+Plug 'vim-scripts/argtextobj.vim'
+Plug 'michaeljsmith/vim-indent-object'
 
 if exists('g:vscode')
     execute 'source ' . stdpath('config') . '/vscode.vim'
