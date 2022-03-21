@@ -1,0 +1,21 @@
+[user]
+	email = me@jedevc.com
+	name = Justin Chadwell
+
+[core]
+	pager = delta
+	excludesFile = ~/.gitignore
+
+[init]
+	defaultBranch = trunk
+
+[diff]
+	colorMoved = default
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	syntax-theme = gruvbox-dark
+	navigate = true
+
