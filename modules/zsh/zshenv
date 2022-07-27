@@ -10,6 +10,12 @@ if [[ -d ~/.gem/ruby/ ]]; then
 		PATH=$PATH:$f/bin
 	done
 fi
+if [[ -d ~/.local/share/gem/ruby/ ]]; then
+	# ruby gems
+	for f in ~/.local/share/gem/ruby/*; do
+		PATH=$PATH:$f/bin
+	done
+fi
 if [[ -d ~/go/bin/ ]]; then
 	# golang
 	PATH=$PATH:~/go/bin
