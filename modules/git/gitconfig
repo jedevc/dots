@@ -12,6 +12,9 @@
 [diff]
 	colorMoved = default
 
+[rebase]
+	autosquash = true
+
 [interactive]
 	diffFilter = delta --color-only
 
