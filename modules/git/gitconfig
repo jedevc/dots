@@ -1,24 +1,27 @@
 [user]
-	email = me@jedevc.com
-	name = Justin Chadwell
+       email = me@jedevc.com
+       name = Justin Chadwell
 
 [core]
-	pager = delta
-	excludesFile = ~/.gitignore
+       pager = delta
+       excludesFile = ~/.gitignore
 
 [init]
-	defaultBranch = trunk
+       defaultBranch = trunk
+
+[push]
+       autoSetupRemote = true
 
 [diff]
-	colorMoved = default
+       colorMoved = default
 
 [rebase]
-	autosquash = true
+       autosquash = true
 
 [interactive]
-	diffFilter = delta --color-only
+       diffFilter = delta --color-only
 
 [delta]
-	syntax-theme = gruvbox-dark
-	navigate = true
+       syntax-theme = gruvbox-dark
+       navigate = true
 
