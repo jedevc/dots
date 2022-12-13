@@ -6,6 +6,9 @@ Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/argtextobj.vim'
 Plug 'michaeljsmith/vim-indent-object'
 
+set ignorecase
+set smartcase
+
 if exists('g:vscode')
     execute 'source ' . stdpath('config') . '/vscode.vim'
 else
