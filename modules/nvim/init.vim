@@ -9,6 +9,8 @@ Plug 'michaeljsmith/vim-indent-object'
 set ignorecase
 set smartcase
 
+set clipboard=unnamedplus
+
 if exists('g:vscode')
     execute 'source ' . stdpath('config') . '/vscode.vim'
 else
