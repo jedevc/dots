@@ -7,7 +7,7 @@
        excludesFile = ~/.gitignore
 
 [init]
-       defaultBranch = trunk
+       defaultBranch = main
 
 [push]
        autoSetupRemote = true
