@@ -1,5 +1,5 @@
-export VISUAL=vim
-export EDITOR=vim
+export VISUAL=nvim
+export EDITOR=nvim
 
 export DEBIAN_PREVENT_KEYBOARD_CHANGES=yes
 
