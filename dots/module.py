@@ -63,10 +63,10 @@ class Module:
         # create symlinks
         for dst, src in self.symlinks.targets(dest, self.path):
             try:
-                os.symlink(src, dst)
+                os.symlink(src.absolute(), dst)
             except FileExistsError:
                 os.remove(dst)
-                os.symlink(src, dst)
+                os.symlink(src.absolute(), dst)
 
         # run post-hook
         if self.post_hook:
