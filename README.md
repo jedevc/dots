@@ -18,12 +18,6 @@ Install only zsh themes:
 $ python -m dots install zsh
 ```
 
-Install only vim themes:
-
-```bash
-$ python -m dots install spacevim
-```
-
 ## Licensing
 
 These dotfiles are licensed under the UNLICENSE. Do whatever you want.
