@@ -44,6 +44,9 @@ return {
       { "<leader>gB", "<Esc><cmd>'<,'>GBrowse<cr>", mode = { "v" }, desc = "Browse repo" },
     },
   },
+  {
+    "tpope/vim-sleuth",
+  },
 
   {
     "stevearc/conform.nvim",
