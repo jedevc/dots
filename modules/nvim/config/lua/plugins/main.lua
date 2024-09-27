@@ -5,6 +5,8 @@ return {
 
   { import = "lazyvim.plugins.extras.test.core" },
 
+  { import = "lazyvim.plugins.extras.coding.mini-surround" },
+
   {
     "nvim-telescope/telescope.nvim",
     opts = {
