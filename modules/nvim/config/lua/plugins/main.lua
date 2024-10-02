@@ -5,8 +5,6 @@ return {
 
   { import = "lazyvim.plugins.extras.test.core" },
 
-  { import = "lazyvim.plugins.extras.coding.mini-surround" },
-
   {
     "nvim-telescope/telescope.nvim",
     opts = {
@@ -26,10 +24,6 @@ return {
     },
   },
 
-  -- replaced by nvim-treesitter-context
-  -- {
-  --   "wellle/context.vim",
-  -- },
   {
     "nvim-treesitter/nvim-treesitter-context",
     opts = {
@@ -75,5 +69,16 @@ return {
         },
       },
     },
+  },
+
+  {
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({
+        -- add config here
+      })
+    end,
   },
 }
