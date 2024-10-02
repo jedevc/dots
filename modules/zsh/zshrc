@@ -122,3 +122,5 @@ if command -v nvim &> /dev/null; then
 	alias vim="nvim"
 fi
 
+# stop ctrl-s
+stty -ixon
