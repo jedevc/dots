@@ -81,4 +81,18 @@ return {
       })
     end,
   },
+
+  {
+    "smjonas/live-command.nvim",
+    tag = "2.*",
+    config = function()
+      require("live-command").setup({
+        commands = {
+          Norm = { cmd = "norm" },
+          G = { cmd = "g" },
+          D = { cmd = "d" },
+        },
+      })
+    end,
+  },
 }
