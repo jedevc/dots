@@ -5,6 +5,8 @@ return {
 
   { import = "lazyvim.plugins.extras.test.core" },
 
+  { import = "lazyvim.plugins.extras.editor.mini-files" },
+
   {
     "nvim-telescope/telescope.nvim",
     opts = {
@@ -25,8 +27,6 @@ return {
     keys = {
       -- swap cwd/root bindings
       { "<leader><space>", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
-      { "<leader>ff", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
-      { "<leader>fF", LazyVim.pick("files", { root = true }), desc = "Find Files (root)" },
     },
   },
 
