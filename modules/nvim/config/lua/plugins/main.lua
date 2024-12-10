@@ -83,11 +83,6 @@ return {
     "kylechui/nvim-surround",
     version = "*",
     event = "VeryLazy",
-    config = function()
-      require("nvim-surround").setup({
-        -- add config here
-      })
-    end,
   },
 
   {
@@ -101,5 +96,10 @@ return {
         },
       })
     end,
+  },
+
+  {
+    -- smarter gF
+    "wsdjeg/vim-fetch",
   },
 }
