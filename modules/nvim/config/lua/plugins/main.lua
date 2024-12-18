@@ -10,22 +10,7 @@ return {
   { import = "lazyvim.plugins.extras.editor.mini-files" },
 
   {
-    "nvim-telescope/telescope.nvim",
-    opts = {
-      defaults = {
-        vimgrep_arguments = {
-          "rg",
-          "--color=never",
-          "--no-heading",
-          "--with-filename",
-          "--line-number",
-          "--column",
-          "--smart-case",
-          "--hidden",
-          "--glob=!.git/",
-        },
-      },
-    },
+    "ibhagwan/fzf-lua",
     keys = {
       -- swap cwd/root bindings
       { "<leader><space>", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },

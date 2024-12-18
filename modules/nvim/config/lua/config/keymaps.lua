@@ -3,8 +3,9 @@
 -- Add any additional keymaps here
 
 -- swap cwd/root bindings
-local lazyterm = function()
-  LazyVim.terminal()
-end
-vim.keymap.set("n", "<c-/>", lazyterm, { desc = "Terminal (cwd)" })
-vim.keymap.set("n", "<c-_>", lazyterm, { desc = "which_key_ignore" })
+vim.keymap.set("n", "<c-/>", function()
+  Snacks.terminal()
+end, { desc = "Terminal (cwd)" })
+vim.keymap.set("n", "<c-_>", function()
+  Snacks.terminal()
+end, { desc = "which_key_ignore" })
