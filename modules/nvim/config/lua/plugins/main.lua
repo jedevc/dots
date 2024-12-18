@@ -26,15 +26,6 @@ return {
   },
 
   {
-    "tpope/vim-fugitive",
-    cmd = { "Git", "GBrowse" },
-    dependencies = { "tpope/vim-rhubarb" },
-    keys = {
-      { "<leader>gB", "<cmd>GBrowse<cr>", mode = { "n" }, desc = "Browse repo" },
-      { "<leader>gB", "<Esc><cmd>'<,'>GBrowse<cr>", mode = { "v" }, desc = "Browse repo" },
-    },
-  },
-  {
     "tpope/vim-sleuth",
   },
 
@@ -90,5 +81,16 @@ return {
   {
     -- smarter gF
     "wsdjeg/vim-fetch",
+  },
+
+  {
+    -- temporary hack in jedevc/snacks.nvim:gitbrowse-abbrev while waiting for folke/snacks.nvim#320
+    "folke/snacks.nvim",
+    commit = "00274d5b71ef842da81f34c4b2a788a931844760",
+    opts = {
+      gitbrowse = {
+        abbrev = false,
+      },
+    },
   },
 }
