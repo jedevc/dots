@@ -93,4 +93,10 @@ return {
       },
     },
   },
+
+  {
+    -- disable snippets library
+    "rafamadriz/friendly-snippets",
+    enabled = false,
+  },
 }
