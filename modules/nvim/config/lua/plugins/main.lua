@@ -1,14 +1,4 @@
 return {
-  { import = "lazyvim.plugins.extras.lang.typescript" },
-  { import = "lazyvim.plugins.extras.lang.go" },
-  { import = "lazyvim.plugins.extras.lang.python" },
-  { import = "lazyvim.plugins.extras.lang.rust" },
-  { import = "lazyvim.plugins.extras.lang.markdown" },
-
-  { import = "lazyvim.plugins.extras.test.core" },
-
-  { import = "lazyvim.plugins.extras.editor.mini-files" },
-
   {
     "ibhagwan/fzf-lua",
     keys = {
@@ -84,12 +74,10 @@ return {
   },
 
   {
-    -- temporary hack in jedevc/snacks.nvim:gitbrowse-abbrev while waiting for folke/snacks.nvim#320
     "folke/snacks.nvim",
-    commit = "8a7fa7c802f3d138933622cd5624424d20a052bf",
     opts = {
       gitbrowse = {
-        abbrev = false,
+        what = "permalink",
       },
     },
   },
