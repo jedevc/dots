@@ -74,4 +74,24 @@ return {
     "rafamadriz/friendly-snippets",
     enabled = false,
   },
+
+  {
+    "pwntester/octo.nvim",
+    opts = {
+      use_local_fs = true,
+    },
+  },
+
+  {
+    "zbirenbaum/copilot.lua",
+    opts = {
+      filetypes = {
+        ["dap-repl"] = false,
+        ["dapui_watches"] = false,
+        ["dapui_hover"] = false,
+        ["dapui_scopes"] = false,
+        ["dapui_console"] = false,
+      },
+    },
+  },
 }
