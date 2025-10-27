@@ -101,4 +101,70 @@ return {
       },
     },
   },
+
+  {
+    "folke/which-key.nvim",
+    opts = {
+      defaults = {
+        ["<leader>gx"] = { name = "+conflicts" },
+      },
+    },
+  },
+  {
+    "akinsho/git-conflict.nvim",
+    lazy = false,
+    opts = {
+      default_mappings = false,
+      default_commands = false,
+    },
+    keys = {
+      {
+        "<leader>gxx",
+        function()
+          local fzfLua = require("fzf-lua")
+          fzfLua.grep({
+            search = "^<<<<<<<(.*?$).*?^>>>>>>>*(.*?$)",
+            no_esc = true,
+            rg_opts = "--multiline --multiline-dotall --replace='<$1 >$2' " .. fzfLua.defaults.grep.rg_opts,
+          })
+        end,
+        desc = "List conflicts",
+      },
+      {
+        "<leader>gxo",
+        function()
+          return require("git-conflict").choose("ours")
+        end,
+        desc = "Choose ours (git-conflict)",
+      },
+      {
+        "<leader>gxt",
+        function()
+          return require("git-conflict").choose("theirs")
+        end,
+        desc = "Choose theirs (git-conflict)",
+      },
+      {
+        "<leader>gxb",
+        function()
+          return require("git-conflict").choose("both")
+        end,
+        desc = "Choose both (git-conflict)",
+      },
+      {
+        "]x",
+        function()
+          return require("git-conflict").find_next("ours")
+        end,
+        desc = "Next conflict (git-conflict)",
+      },
+      {
+        "[x",
+        function()
+          return require("git-conflict").find_prev("ours")
+        end,
+        desc = "Previous conflict (git-conflict)",
+      },
+    },
+  },
 }
