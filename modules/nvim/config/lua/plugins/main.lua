@@ -1,6 +1,9 @@
 return {
   {
     "ibhagwan/fzf-lua",
+    opts = {
+      fzf_opts = { ["--cycle"] = true },
+    },
     keys = {
       -- swap cwd/root bindings
       { "<leader><space>", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
@@ -105,8 +108,8 @@ return {
   {
     "folke/which-key.nvim",
     opts = {
-      defaults = {
-        ["<leader>gx"] = { name = "+conflicts" },
+      spec = {
+        { "<leader>gx", group = "+conflicts" },
       },
     },
   },
@@ -116,6 +119,7 @@ return {
     opts = {
       default_mappings = false,
       default_commands = false,
+      disable_diagnostics = true,
     },
     keys = {
       {
@@ -123,6 +127,10 @@ return {
         function()
           local fzfLua = require("fzf-lua")
           fzfLua.grep({
+            winopts = {
+              title = "Git Conflicts",
+            },
+            prompt = fzfLua.defaults.grep.input_prompt,
             search = "^<<<<<<<(.*?$).*?^>>>>>>>*(.*?$)",
             no_esc = true,
             rg_opts = "--multiline --multiline-dotall --replace='<$1 >$2' " .. fzfLua.defaults.grep.rg_opts,
@@ -150,6 +158,13 @@ return {
           return require("git-conflict").choose("both")
         end,
         desc = "Choose both (git-conflict)",
+      },
+      {
+        "<leader>gxn",
+        function()
+          return require("git-conflict").choose("none")
+        end,
+        desc = "Choose none (git-conflict)",
       },
       {
         "]x",
