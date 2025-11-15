@@ -182,4 +182,43 @@ return {
       },
     },
   },
+
+  {
+    "mason-org/mason.nvim",
+    opts = { ensure_installed = { "haxe-language-server" } },
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        haxe_language_server = {
+          cmd = { "haxe-language-server" },
+          filetypes = { "haxe" },
+          root_markers = { ".hxml", ".git", "Project.xml" },
+          before_init = function(params, config)
+            local hxmls = vim.fs.find(function(name)
+              return name:match("%.hxml$")
+            end, { path = config.root_dir, type = "file" })
+            local hxml = hxmls[1]
+            if hxml then
+              params.initializationOptions = params.initializationOptions or {}
+              params.initializationOptions.displayArguments = { hxml }
+            end
+          end,
+          settings = {
+            haxe = {
+              buildCompletionCache = true,
+            },
+          },
+        },
+      },
+    },
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      -- see autocmds.lua for where this is installed
+      ensure_installed = { "haxe" },
+    },
+  },
 }
