@@ -1,8 +1,24 @@
 return {
   {
-    "mason-org/mason.nvim",
-    opts = { ensure_installed = { "haxe-language-server" } },
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "haxe", -- installed in autocmds.lua
+        "templ",
+      },
+    },
   },
+
+  {
+    "mason-org/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "haxe-language-server", -- configured below
+        "templ",
+      },
+    },
+  },
+
   {
     "neovim/nvim-lspconfig",
     opts = {
@@ -38,14 +54,6 @@ return {
           },
         },
       },
-    },
-  },
-
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = {
-      -- see autocmds.lua for where this is installed
-      ensure_installed = { "haxe" },
     },
   },
 }
