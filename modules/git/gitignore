@@ -1,2 +1,5 @@
-/.vscode/
 /.envrc
+/.env
+/.env.d
+
+/.vscode/
