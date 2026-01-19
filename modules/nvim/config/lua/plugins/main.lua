@@ -107,7 +107,11 @@ return {
     },
   },
   {
-    "akinsho/git-conflict.nvim",
+    -- "akinsho/git-conflict.nvim",
+    -- see https://github.com/akinsho/git-conflict.nvim/issues/119
+    "b0o/git-conflict.nvim",
+    commit = "bd316c5bc8a8815c2402649770dc6c2548063327",
+
     lazy = false,
     opts = {
       default_mappings = false,
